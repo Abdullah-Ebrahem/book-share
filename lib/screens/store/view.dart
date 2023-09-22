@@ -1,3 +1,4 @@
+import 'package:book_share/screens/discover/components/custom_search.dart';
 import 'package:book_share/screens/store/components/item_button.dart';
 import 'package:book_share/screens/store/controller.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,9 @@ class _StoreScreenState extends State<StoreScreen> {
           elevation: 5,
           shape: const StadiumBorder(),
           child: TextFormField(
+            onTap: () {
+              showSearch(context: context, delegate: CustomSearch());
+            },
             decoration: InputDecoration(
                 border: InputBorder.none,
                 hintText: 'Search Books, Authors',

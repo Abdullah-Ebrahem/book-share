@@ -1,6 +1,6 @@
 import 'package:book_share/core/cache_helper.dart';
 import 'package:book_share/core/methods.dart';
-import 'package:book_share/screens/master/view.dart';
+import 'package:book_share/screens/choose_topics/view.dart';
 import 'package:book_share/screens/onboarding/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -104,7 +104,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             onPressed: () {
                               CacheHelper.saveNotFirstTime();
                               navigateTo(
-                                  page: const MasterScreen(),
+                                  page: const ChooseTopics(),
                                   withHistory: false);
                             },
                             child: Text(

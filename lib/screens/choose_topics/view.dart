@@ -1,5 +1,7 @@
+import 'package:book_share/core/methods.dart';
 import 'package:book_share/screens/choose_topics/components/item_topic.dart';
 import 'package:book_share/screens/choose_topics/controller.dart';
+import 'package:book_share/screens/master/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -78,7 +80,9 @@ class _ChooseTopicsState extends State<ChooseTopics> {
             Padding(
               padding: EdgeInsetsDirectional.only(start: 25.w, end: 25.w),
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    navigateTo(page: const MasterScreen(), withHistory: false);
+                  },
                   style: ElevatedButton.styleFrom(
                       fixedSize: Size(MediaQuery.of(context).size.width, 45.h),
                       shape: RoundedRectangleBorder(

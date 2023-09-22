@@ -1,3 +1,4 @@
+import 'package:book_share/screens/discover/components/custom_search.dart';
 import 'package:book_share/screens/discover/components/item_title.dart';
 import 'package:book_share/screens/discover/components/item_top_picks.dart';
 import 'package:book_share/screens/discover/components/item_topic.dart';
@@ -50,6 +51,10 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                       elevation: 5,
                       shape: const StadiumBorder(),
                       child: TextFormField(
+                        onTap: () {
+                          showSearch(
+                              context: context, delegate: CustomSearch());
+                        },
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Search Books, Authors',

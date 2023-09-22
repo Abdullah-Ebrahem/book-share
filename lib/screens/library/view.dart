@@ -1,3 +1,4 @@
+import 'package:book_share/screens/discover/components/custom_search.dart';
 import 'package:book_share/screens/library/components/general.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,6 +21,9 @@ class _LibraryScreenState extends State<LibraryScreen> {
               elevation: 5,
               shape: const StadiumBorder(),
               child: TextFormField(
+                onTap: () {
+                  showSearch(context: context, delegate: CustomSearch());
+                },
                 decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Search Books, Authors',

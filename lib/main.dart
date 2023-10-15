@@ -2,10 +2,12 @@ import 'package:book_share/core/cache_helper.dart';
 import 'package:book_share/core/methods.dart';
 import 'package:book_share/screens/splash/view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   await CacheHelper.init();
   runApp(const MyApp());
 }
